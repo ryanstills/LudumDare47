@@ -5,3 +5,12 @@
 [node name="Main" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.00784314, 0.627451, 0.839216, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

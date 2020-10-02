@@ -19,6 +19,10 @@ config/name="LudumDare47"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://scripts/globals.gd"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
