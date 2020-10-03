@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://assets/png/red_train.png" type="Texture" id=2]
+[ext_resource path="res://assets/png/purple_train.png" type="Texture" id=3]
+[ext_resource path="res://assets/png/tan_train.png" type="Texture" id=4]
+[ext_resource path="res://assets/png/orange_train.png" type="Texture" id=5]
+[ext_resource path="res://assets/png/yellow_train.png" type="Texture" id=6]
+[ext_resource path="res://assets/png/platform.png" type="Texture" id=7]
 
 [node name="Main" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background_images" type="Node2D" parent="."]
+
+[node name="background" type="ColorRect" parent="background_images"]
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.00784314, 0.627451, 0.839216, 1 )
@@ -14,3 +22,68 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="center_line" type="ColorRect" parent="background_images"]
+margin_top = 300.0
+margin_right = 1024.0
+margin_bottom = 302.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="left_boundary_line" type="ColorRect" parent="background_images"]
+margin_left = 48.0
+margin_right = 50.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="right_boundary_line2" type="ColorRect" parent="background_images"]
+margin_left = 976.0
+margin_right = 978.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="trains" type="Node2D" parent="."]
+visible = false
+
+[node name="orange_train" type="Sprite" parent="trains"]
+position = Vector2( 237.303, 155.465 )
+rotation = -0.785398
+texture = ExtResource( 5 )
+
+[node name="purple_train" type="Sprite" parent="trains"]
+position = Vector2( 208.641, 224.761 )
+rotation = 4.71239
+texture = ExtResource( 3 )
+
+[node name="red_train" type="Sprite" parent="trains"]
+position = Vector2( 306.222, 127.18 )
+texture = ExtResource( 2 )
+
+[node name="tan_train" type="Sprite" parent="trains"]
+position = Vector2( 236.925, 292.643 )
+rotation = -2.35619
+texture = ExtResource( 4 )
+
+[node name="yellow_train" type="Sprite" parent="trains"]
+position = Vector2( 304.636, 318.513 )
+rotation = -3.14159
+texture = ExtResource( 6 )
+
+[node name="start_platform" type="Sprite" parent="."]
+position = Vector2( 24, 300 )
+texture = ExtResource( 7 )
+
+[node name="end_platform" type="Sprite" parent="."]
+position = Vector2( 1000, 300 )
+texture = ExtResource( 7 )
